@@ -17,18 +17,36 @@ public class Persona {
 	
 	// Constructores sobrecargados
 	
-	public Persona(String nombre, String dni, char sexo) {
+	public Persona(String nombre, String dni, char sexo) throws DatosNoCorrectosException {
 		
 		this.nombre = nombre;
-		this.dni= dni;
-		this.sexo= sexo;
+
+		if (dni.length()<9 || dni.length()>9) {
+			throw new DatosNoCorrectosException("Datos no correctos");
+			
+		}else if(dni.codePointAt(8) < 65 || dni.codePointAt(8) > 90 ) {
+			throw new DatosNoCorrectosException("Datos no correctos");
+		}else {
+			this.dni= dni;
+		}
+		
+		if(sexo == 'M' || sexo == 'F') {
+			this.sexo= sexo;	
+		}else {
+			throw new DatosNoCorrectosException("Datos no correctos");
+		}
 		
 	}
 	
-	public Persona(String nombre, char sexo) {
+	public Persona(String nombre, char sexo) throws DatosNoCorrectosException {
 		
 		this.nombre = nombre;
-		this.sexo= sexo;
+		
+		if(sexo == 'M' || sexo == 'F') {
+			this.sexo= sexo;	
+		}else {
+			throw new DatosNoCorrectosException("Datos no correctos");
+		}
 		
 	}
 

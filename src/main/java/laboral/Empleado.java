@@ -31,7 +31,7 @@ public class Empleado extends Persona{
 		}
 	}
 
-	public Empleado(String nombre, String dni, char sexo) {
+	public Empleado(String nombre, String dni, char sexo) throws DatosNoCorrectosException {
 		super(nombre, dni, sexo);
 	}
 
