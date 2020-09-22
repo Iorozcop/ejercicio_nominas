@@ -3,7 +3,7 @@ package laboral;
 /**
  * 2DAW - ejercicio nóminas
  * 
- * @autor Isabel Orozco
+ * @author Isabel Orozco
  * 
  */
 
@@ -19,7 +19,7 @@ public class CalculaNominas {
 		escribe(empleado1, empleado2);
 		
 		//incremento de años del segundo empleado
-		empleado2.incrAnyo(empleado2);
+		empleado2.incrAnyo();
 		
 		//cambio de categoría del primer empleado
 		empleado1.setCategoria(9);
@@ -39,10 +39,11 @@ public class CalculaNominas {
 	private static void escribe(Empleado empleado1, Empleado empleado2) {
 		empleado1.imprime();
 		Nomina nomina1 = new Nomina();
+		
 		System.out.println("el sueldo del empleado es:" + nomina1.sueldo(empleado1));
-		Nomina nomina2 = new Nomina();
+		
 		empleado2.imprime();
-		System.out.println("el sueldo del empleado es:" + nomina2.sueldo(empleado2));
+		System.out.println("el sueldo del empleado es:" + nomina1.sueldo(empleado2));
 	}
 
 }

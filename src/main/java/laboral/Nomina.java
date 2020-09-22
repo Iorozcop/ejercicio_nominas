@@ -3,7 +3,7 @@ package laboral;
 /**
  * 2DAW - ejercicio nóminas
  * 
- * @autor Isabel Orozco
+ * @author Isabel Orozco
  * 
  */
 
@@ -19,11 +19,9 @@ public class Nomina {
 	 * @param empleado1
 	 * @return
 	 */
-	public int sueldo(Empleado empleado1)  {
-		int sueldo;
-		sueldo= SUELDO_BASE[empleado1.getCategoria()-1] + (5000 * empleado1.anyosTrabajados);
+	public int sueldo(Empleado empleado1)  { 
 		
-		return sueldo;
+		return SUELDO_BASE[empleado1.getCategoria()-1] + (5000 * empleado1.anyosTrabajados);
 		
 	}
 }

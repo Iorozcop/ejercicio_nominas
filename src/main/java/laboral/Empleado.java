@@ -3,7 +3,7 @@ package laboral;
 /**
  * 2DAW - ejercicio nóminas
  * 
- * @autor Isabel Orozco
+ * @author Isabel Orozco
  * 
  */
 
@@ -15,21 +15,31 @@ public class Empleado extends Persona{
 	
 
 	//Constructores sobrecargados
+	
+	/**Constructor que recibe los atributos de Persona y los propios de Empleado
+	 * 
+	 * @param nombre
+	 * @param dni
+	 * @param sexo
+	 * @param categoria
+	 * @param anyosTrabajados
+	 * @throws DatosNoCorrectosException
+	 */
 	public Empleado(String nombre, String dni, char sexo, int categoria, int anyosTrabajados) throws DatosNoCorrectosException {
 		super(nombre, dni, sexo);
 		
-		if (categoria<=0 || categoria>10) {
-			throw new DatosNoCorrectosException("Datos no correctos");
-		}else {
-			this.categoria= categoria;
-		}
+		setCategoria(categoria);
+		setAnyosTrabajados(anyosTrabajados);
 		
-		if(anyosTrabajados<0) {
-			throw new DatosNoCorrectosException("Datos no correctos");
-		}else {
-		this.anyosTrabajados = anyosTrabajados;
-		}
 	}
+	
+	/**Constructor que recibe los atributos propios de Persona
+	 * 
+	 * @param nombre
+	 * @param dni
+	 * @param sexo
+	 * @throws DatosNoCorrectosException
+	 */
 
 	public Empleado(String nombre, String dni, char sexo) throws DatosNoCorrectosException {
 		super(nombre, dni, sexo);
@@ -82,12 +92,10 @@ public class Empleado extends Persona{
 
 	/**Método que incremente en uno los años trabajados
 	 * 
-	 * @param anyosTrabajados
-	 * @return
 	 * @throws DatosNoCorrectosException 
 	 */
-	public void incrAnyo(Empleado empleado1) throws DatosNoCorrectosException {	
-		empleado1.setAnyosTrabajados(empleado1.getAnyosTrabajados() +1);
+	public void incrAnyo() throws DatosNoCorrectosException {	
+		setAnyosTrabajados(getAnyosTrabajados() +1);
 	}
 	
 	/**Método que imprime todos los datos del empleado
