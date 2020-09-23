@@ -104,8 +104,8 @@ public class Empleado extends Persona{
 	
 	@Override
 	public void imprime() {
-		System.out.println("Empleado [categoria=" + categoria + ", anyosTrabajados=" + anyosTrabajados + ", nombre=" + nombre
-				+ ", dni=" + dni + ", sexo=" + sexo + "]"); 
+		System.out.println("categoria=" + categoria + "-anyosTrabajados=" + anyosTrabajados + "-nombre=" + nombre
+				+ "-dni=" + dni + "-sexo=" + sexo ); 
 	}
 	
 }

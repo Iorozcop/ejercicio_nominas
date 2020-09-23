@@ -8,7 +8,7 @@ package laboral;
  */
 
 public class CalculaNominas {
-
+	
 	public static void main(String[] args) throws DatosNoCorrectosException {
 		
 		//Instanciación de empleados
@@ -30,6 +30,8 @@ public class CalculaNominas {
 		escribe(empleado1, empleado2);
 		
 	}
+		
+	
 	
 	/**Método para impirmir los datos de los empleados
 	 * 
@@ -45,5 +47,5 @@ public class CalculaNominas {
 		empleado2.imprime();
 		System.out.println("el sueldo del empleado es:" + nomina1.sueldo(empleado2));
 	}
-
+	
 }
