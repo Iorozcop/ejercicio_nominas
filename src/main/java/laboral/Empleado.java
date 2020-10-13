@@ -48,6 +48,30 @@ public class Empleado extends Persona{
 
 	//Métodos
 	
+	/**Método que devuelve el nombre
+	 * 
+	 * @return
+	 */
+	public String getNombre() {
+		return nombre;
+	}
+	
+	/**Método que devuelve el dni
+	 * 
+	 * @return
+	 */
+	public String getDni() {
+		return dni;
+	}
+	
+	/**Método que devuelve el sexo
+	 * 
+	 * @return
+	 */
+	public char getSexo() {
+		return sexo;
+	}
+	
 	/**Método que devuelve la categoría
 	 * 
 	 * @return
@@ -55,6 +79,8 @@ public class Empleado extends Persona{
 	public int getCategoria() {
 		return categoria;
 	}
+	
+
 
 	/**Método para cambiar la categoría
 	 * 
@@ -89,6 +115,8 @@ public class Empleado extends Persona{
 	public int getAnyosTrabajados() {
 		return anyosTrabajados;
 	}
+	
+	
 
 	/**Método que incremente en uno los años trabajados
 	 * 
@@ -107,5 +135,6 @@ public class Empleado extends Persona{
 		System.out.println("categoria=" + categoria + "-anyosTrabajados=" + anyosTrabajados + "-nombre=" + nombre
 				+ "-dni=" + dni + "-sexo=" + sexo ); 
 	}
+
 	
 }

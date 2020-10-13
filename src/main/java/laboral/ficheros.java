@@ -11,7 +11,7 @@ public class ficheros {
 	
 	static String ruta= ".\\file\\empleados.txt";
 	
-	public static void main(String[] args) throws IOException {
+	public static ArrayList<Empleado> leer() {
 		
 
 		//creamos array y arrayList para poder almacenar cada uno de los datos de los empleados
@@ -46,9 +46,11 @@ public class ficheros {
 						System.out.println("Mensaje 2: " + ex2.getMessage());
 					}
 				}
-				
+				return empleados;
+	}
+
 				// Fichero que vamos a escribir (salario.txt)
-				
+		public static void escribe(ArrayList<Empleado> empleados) throws IOException {		
 				FileWriter ficheroEscritura =  new FileWriter(".\\file\\salario.txt");
 			    BufferedWriter escritura = new BufferedWriter(ficheroEscritura);
 			    
@@ -60,9 +62,9 @@ public class ficheros {
 			    	escritura.newLine();	    	    
 		}
 				 escritura.close();    
-	}
+	
 
-    
+		}
 }
 					
 			

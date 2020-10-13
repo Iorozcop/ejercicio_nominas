@@ -24,4 +24,6 @@ public class Nomina {
 		return SUELDO_BASE[empleado1.getCategoria()-1] + (5000 * empleado1.anyosTrabajados);
 		
 	}
+	
+	
 }
